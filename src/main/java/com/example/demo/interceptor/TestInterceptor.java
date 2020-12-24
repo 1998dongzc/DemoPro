@@ -1,6 +1,5 @@
 package com.example.demo.interceptor;
 
-import com.example.demo.controller.DemoController;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
