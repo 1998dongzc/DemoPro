@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function (){
+            $("button").on("click",function (){
+                $.ajax({
+                    url:"http://localhost:8080/test",
+                    data:{"id":1},
+                    sync:true,
+                    success:function (data){
+                        $(".id").text(data.id)
+                        $(".name").text(data.name)
+                        $(".sex").text(data.sex)
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<button>获取数据</button>
+<div id="data">
+    I&nbsp;D:<span class="id">111</span><br>
+    姓名:<span class="name">111</span><br>
+    性别:<span class="sex">111</span>
+</div>
+</body>
+</html>
